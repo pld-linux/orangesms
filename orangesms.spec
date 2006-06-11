@@ -11,6 +11,7 @@ Source1:	http://rodion.infobot.pl/py/tk.send.sms.txt
 # Source1-md5:	547ea7324f6f38379d22679a9cfd44f5
 Source2:	http://skrobul.bmj.pl/PyOrangeSMS.py
 # Source2-md5:	6de5efb48f9317486bd7e075d4ff5b18
+Patch0:		%{name}-shell.patch
 URL:		http://rodion.infobot.pl/orangembox.php
 Requires:	python >= 1:2.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,14 +36,23 @@ Tk interface for orangesms.
 Interfejs dla orangesms napisany w Tk.
 
 %prep
+rm -rfd %{name}-%{version}
+mkdir %{name}-%{version}
+cp %{SOURCE0} ./%{name}-%{version}
+cp %{SOURCE1} ./%{name}-%{version}
+cp %{SOURCE2} ./%{name}-%{version}
+%patch0 -p0
+find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
 %build
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/sms.orangembox.py
-install %{SOURCE1} $RPM_BUILD_ROOT%{_bindir}/tk.send.sms.py
-install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}
+cd  %{name}-%{version}
+install sms.orangembox.txt $RPM_BUILD_ROOT%{_bindir}/sms.orangembox.py
+install tk.send.sms.txt $RPM_BUILD_ROOT%{_bindir}/tk.send.sms.py
+install PyOrangeSMS.py $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
