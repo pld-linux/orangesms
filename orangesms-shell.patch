@@ -1,0 +1,27 @@
+diff -uNr orangesms-0.3orig/PyOrangeSMS.py orangesms-0.3/PyOrangeSMS.py
+--- orangesms-0.3orig/PyOrangeSMS.py	2006-06-12 01:11:26.000000000 +0200
++++ orangesms-0.3/PyOrangeSMS.py	2006-06-12 01:12:19.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.4
++#!/usr/bin/python
+ # -*- coding: iso-8859-2 -*-
+ # Script: sms.orangembox.py - wersja GTK
+ # Copyright by skrobul@batnet.pl 2005
+diff -uNr orangesms-0.3orig/sms.orangembox.txt orangesms-0.3/sms.orangembox.txt
+--- orangesms-0.3orig/sms.orangembox.txt	2006-06-12 01:11:26.000000000 +0200
++++ orangesms-0.3/sms.orangembox.txt	2006-06-12 01:12:44.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python2.4
++#!/usr/bin/python
+ # -*- coding: iso-8859-2 -*-
+ #
+ # Script: sms.orangembox.py
+diff -uNr orangesms-0.3orig/tk.send.sms.txt orangesms-0.3/tk.send.sms.txt
+--- orangesms-0.3orig/tk.send.sms.txt	2006-06-12 01:11:26.000000000 +0200
++++ orangesms-0.3/tk.send.sms.txt	2006-06-12 01:12:59.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python2.4
++#!/usr/bin/python
+ # -*- coding: iso-8859-2 -*-
+ #
+ # Script: tk.send.sms.py
