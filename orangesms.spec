@@ -40,9 +40,9 @@ Interfejs dla orangesms napisany w Tk.
 %prep
 rm -rfd %{name}-%{version}
 mkdir %{name}-%{version}
-cp %{SOURCE0} ./%{name}-%{version}
-cp %{SOURCE1} ./%{name}-%{version}
-cp %{SOURCE2} ./%{name}-%{version}
+install %{SOURCE0} ./%{name}-%{version}
+install %{SOURCE1} ./%{name}-%{version}
+install %{SOURCE2} ./%{name}-%{version}
 %patch0 -p0
 find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
