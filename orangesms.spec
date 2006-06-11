@@ -1,8 +1,10 @@
+#TODO
+# - patch to sms.orangembox.txt - login and pasword from /etc/file or/and better from ~/.file
 Summary:	orangesms
 Summary(pl):	orangesms
 Name:		orangesms
 Version:	0.3
-Release:	1
+Release:	1.1
 License:	BSD/Other
 Group:		Applications
 Source0:	http://rodion.infobot.pl/py/sms.orangembox.txt
