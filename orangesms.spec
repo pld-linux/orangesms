@@ -1,10 +1,8 @@
-#TODO
-# - patch to sms.orangembox.txt - login and pasword from /etc/file or/and better from ~/.file
 Summary:	orangesms
 Summary(pl):	orangesms
 Name:		orangesms
 Version:	0.3
-Release:	1.1
+Release:	2
 License:	BSD/Other
 Group:		Applications
 Source0:	http://rodion.infobot.pl/py/sms.orangembox.txt
@@ -14,6 +12,7 @@ Source1:	http://rodion.infobot.pl/py/tk.send.sms.txt
 Source2:	http://skrobul.bmj.pl/PyOrangeSMS.py
 # Source2-md5:	6de5efb48f9317486bd7e075d4ff5b18
 Patch0:		%{name}-shell.patch
+Patch1:		%{name}-config_file.patch
 URL:		http://rodion.infobot.pl/orangembox.php
 Requires:	python >= 1:2.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,6 +43,7 @@ install %{SOURCE0} ./%{name}-%{version}
 install %{SOURCE1} ./%{name}-%{version}
 install %{SOURCE2} ./%{name}-%{version}
 %patch0 -p0
+%patch1 -p0
 find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
 %build
