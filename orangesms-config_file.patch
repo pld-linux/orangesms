@@ -1,0 +1,38 @@
+--- orangesms-0.3/sms.orangembox.txt	2006-06-12 03:03:05.801059032 +0200
++++ orangesms-0.3/sms.orangembox.txt-new	2006-06-12 03:03:50.944196232 +0200
+@@ -12,12 +12,30 @@
+ 
+ import cookielib, string, urllib, urllib2
+ 
+-debug = 0   # for debug change to '1'
+-freesms = 0     # for smses left change to '1'
+-phonebook = 'phonebook.txt'
+-login = ''  # set login
+-password = '' # set password
++orangesms = '.orangesms.txt'
+ 
++def _tajne(name):
++    try:
++        plik = open (orangesms, 'r')
++    except IOError:
++        print 'Error. File "%s" not found.' % orangesms
++        sys.exit(1)
++    else:
++        for line in plik.readlines():
++            if name in line:
++                name = line.split()[-1]
++                return name
++                try:
++                    plik.close()
++                except IOError:
++                    print 'Error. File "%s" not found.' % orangesms
++                    sys.exit(1)
++
++debug = _tajne("debug")
++freesms = _tajne("freesms")
++phonebook = _tajne("phonebook")
++login = _tajne("login")
++password = _tajne("password")
+ 
+ def _phonebook(name):
+     try:
