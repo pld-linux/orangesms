@@ -38,13 +38,12 @@ Tk interface for orangesms.
 Interfejs dla orangesms napisany w Tk.
 
 %prep
-rm -rfd %{name}-%{version}
-mkdir %{name}-%{version}
-install %{SOURCE0} ./%{name}-%{version}
-install %{SOURCE1} ./%{name}-%{version}
-install %{SOURCE2} ./%{name}-%{version}
-%patch0 -p0
-%patch1 -p0
+%setup -qcT
+install %{SOURCE0} .
+install %{SOURCE1} .
+install %{SOURCE2} .
+%patch0 -p1
+%patch1 -p1
 find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
 %build
@@ -52,7 +51,7 @@ find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-cd  %{name}-%{version}
+
 install sms.orangembox.txt $RPM_BUILD_ROOT%{_bindir}/sms.orangembox.py
 install tk.send.sms.txt $RPM_BUILD_ROOT%{_bindir}/tk.send.sms.py
 install PyOrangeSMS.py $RPM_BUILD_ROOT%{_bindir}
