@@ -28,6 +28,7 @@ Summary:	orangesms-tk
 Summary(pl):	orangesms-tk
 Group:		X11/Applications
 Requires:	python >= 1:2.4.1
+Requires:	python-tkinter >= 1:2.4.1
 Requires:	tk
 
 %description tk
