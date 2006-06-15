@@ -1,5 +1,6 @@
-Summary:	orangesms
-Summary(pl):	orangesms
+Summary:	orangesms - sms scripts for Orange provider
+Summary(de):	orangesms - SMS Skripts für Orange Provider
+Summary(pl):	orangesms - skrypty sms dla us³ugodawcy Orange
 Name:		orangesms
 Version:	0.3
 Release:	2
@@ -19,6 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 SMS script for Orange MBox.
+
+%description -l de
+SMS Skripts für Orange MBox.
 
 %description -l pl
 Skrypt SMS dla Orange MBox.
