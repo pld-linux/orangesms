@@ -1,6 +1,6 @@
-Summary:	orangesms - sms scripts for Orange provider
+Summary:	orangesms - SMS scripts for Orange provider
 Summary(de):	orangesms - SMS Skripts für Orange Provider
-Summary(pl):	orangesms - skrypty sms dla us³ugodawcy Orange
+Summary(pl):	orangesms - skrypty SMS dla us³ugodawcy Orange
 Name:		orangesms
 Version:	0.3
 Release:	2
