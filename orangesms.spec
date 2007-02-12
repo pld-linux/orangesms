@@ -1,6 +1,6 @@
 Summary:	orangesms - SMS scripts for Orange provider
-Summary(de):	orangesms - SMS Skripts für Orange Provider
-Summary(pl):	orangesms - skrypty SMS dla us³ugodawcy Orange
+Summary(de.UTF-8):   orangesms - SMS Skripts fÃ¼r Orange Provider
+Summary(pl.UTF-8):   orangesms - skrypty SMS dla usÅ‚ugodawcy Orange
 Name:		orangesms
 Version:	0.3
 Release:	2
@@ -21,15 +21,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 SMS script for Orange MBox.
 
-%description -l de
-SMS Skripts für Orange MBox.
+%description -l de.UTF-8
+SMS Skripts fÃ¼r Orange MBox.
 
-%description -l pl
+%description -l pl.UTF-8
 Skrypt SMS dla Orange MBox.
 
 %package tk
 Summary:	orangesms-tk
-Summary(pl):	orangesms-tk
+Summary(pl.UTF-8):   orangesms-tk
 Group:		X11/Applications
 Requires:	python >= 1:2.4.1
 Requires:	python-tkinter >= 1:2.4.1
@@ -38,7 +38,7 @@ Requires:	tk
 %description tk
 Tk interface for orangesms.
 
-%description tk -l pl
+%description tk -l pl.UTF-8
 Interfejs dla orangesms napisany w Tk.
 
 %prep
