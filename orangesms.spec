@@ -14,6 +14,7 @@ Source2:	http://skrobul.bmj.pl/PyOrangeSMS.py
 # Source2-md5:	6de5efb48f9317486bd7e075d4ff5b18
 Patch0:		%{name}-shell.patch
 Patch1:		%{name}-config_file.patch
+Patch2:		%{name}-etc.patch
 URL:		http://rodion.infobot.pl/orangembox.php
 Requires:	python >= 1:2.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
