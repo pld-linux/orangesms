@@ -47,8 +47,8 @@ Interfejs dla orangesms napisany w Tk.
 install %{SOURCE0} .
 install %{SOURCE1} .
 install %{SOURCE2} .
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 find '(' -name '*.txt' -o -name '*.py' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
 %build
